@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Author: Gabe Toledo
+    Class: Software Engineering 
+    Project: Assignment Portfolio
+    Description: This is where all assignments get posted
+-->
+<head>
+    <meta charset='UTF-8'>
+    <title>RegExp</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<h1>Regular Expression Tester</h1>
+<input type="text" id="myText" value="Some text...">
+<input type="text" id="myText2" value="Some text...">
+<button onclick="regexp()">Try it</button>
+<p id="demo">Output</p>
+<script>
+    function regexp() {
+    
+        var x = document.getElementById("myText").value;
+        var y = document.getElementById("myText2").value;
+        const regex = new RegExp(x);
+        const globalRegex = new RegExp(x, 'g');
+        var tested = regex.test(y);
+        document.getElementById("demo").innerHTML = tested;
+    }
+</script>
+
+</html>
